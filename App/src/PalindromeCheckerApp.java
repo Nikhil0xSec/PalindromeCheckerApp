@@ -1,31 +1,40 @@
-import java.util.Scanner;
-
+/**
+ * main class - use case palindrome app
+ *
+ * use case 2: hardcoded Palindrome verification
+ * description
+ * this class demonstrate basic palindrome validation using a hardcoded string value
+ *
+ * the application:
+ * stores a predefined string
+ * compares characters from both sides
+ * determine whether the string is palindrome or not
+ * display the result in the console
+ *
+ * this demonstrate the fundamental comparison logic before using advanced data structures
+ *
+ *
+ *
+ * @author  Nikhil Kumar
+ * @version 2.0
+ */
 public class PalindromeCheckerApp {
-
-    /**
-     * Application entry point
-     * This is the first method executed by the JVM
-     *when the program starts.
-     * * @param args command-line arguments
-     * @author Nikhil kumar
-     * @version 1.0
-
-     */
     public static void main(String[] args){
-
-        System.out.println("welcome to palindrome Checker Management System");
-        System.out.println("version :1.0");
-        System.out.println("System initialized successfully ");
-        Scanner input = new Scanner(System.in);
-
-        String str=new String("madam");
-        for( int i =0;i<str.length()/2;i++){
-            if(str.charAt(i)!=str.charAt(str.length()-1-i))
-            {  System.out.println("The string  not the palindrome");
-                return ;}
+        //Hardcoded string
+        String word ="Nikhil";
+        boolean isPalindrome=true;
+        for(int i=0;i<word.length()/2;i++){
+            if(word.charAt(i)!=word.charAt(word.length()-i-1)){
+                isPalindrome=true;
+            }
         }
-        System.out.println(" the string is palindrome ");
-
-
+        System.out.println("Input text: Nikhil");
+        System.out.print("is it palindrome?:");
+        if (isPalindrome){
+            System.out.println("true");
+        }
+        else
+            System.out.println("false");
     }
+
 }
